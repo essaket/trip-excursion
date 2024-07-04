@@ -1,0 +1,38 @@
+body {
+    background-color: #FAFBFC;
+}
+.big-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 48px; /* Adjust size as needed */
+    font-weight: 900; /* Adjust weight as needed */
+    text-align: center;
+    margin: 30px auto 0; /* Adjust margin as needed */
+    color: white;
+    max-width: 750px;
+}
+
+.sub-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; /* Adjust size as needed */
+    font-weight: 600; /* Semi-bold */
+    text-align: center;
+    margin: 16px auto; /* Adjust margin as needed */
+    max-width: 400px; /* Ensures text does not stretch too wide */
+    color: white;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url('../assets/images/landscap-background.png');
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the background image */
+    height: 600px; /* Adjust based on your design */
+    margin: 24px;
+    padding: 24px;
+    border-radius: 24px;
+}
+
+.shadow-div {
+    box-shadow: 0 4px 16px 0 rgba(141, 211, 187, 0.15);
+    margin-left: auto;
+    margin-right: auto;
+}
