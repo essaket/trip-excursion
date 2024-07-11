@@ -14,8 +14,8 @@ const Home = () => {
       </h2>
       <div className="w-[86%] h-[280px] rounded-[16px] mt-[10%] bg-white shadow-div">
         <SearchForm />
-        <SearchForm />
       </div>
+
       {/* Add more content */}
     </div>
   );
