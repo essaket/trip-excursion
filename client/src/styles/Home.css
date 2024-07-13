@@ -1,105 +1,112 @@
 body {
-    background-color: #FAFBFC;
+  background-color: #fafbfc;
 }
 .big-header {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px; /* Adjust size as needed */
-    font-weight: 900; /* Adjust weight as needed */
-    text-align: center;
-    margin: 30px auto 0; /* Adjust margin as needed */
-    color: white;
-    max-width: 750px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px; /* Adjust size as needed */
+  font-weight: 900; /* Adjust weight as needed */
+  text-align: center;
+  margin: 30px auto 0; /* Adjust margin as needed */
+  color: white;
+  max-width: 750px;
 }
 
 .sub-header {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px; /* Adjust size as needed */
-    font-weight: 600; /* Semi-bold */
-    text-align: center;
-    margin: 16px auto; /* Adjust margin as needed */
-    max-width: 400px; /* Ensures text does not stretch too wide */
-    color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px; /* Adjust size as needed */
+  font-weight: 600; /* Semi-bold */
+  text-align: center;
+  margin: 16px auto; /* Adjust margin as needed */
+  max-width: 400px; /* Ensures text does not stretch too wide */
+  color: white;
 }
 
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url('../assets/images/landscap-background.png');
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the background image */
-    height: 600px; /* Adjust based on your design */
-    margin: 24px;
-    padding: 24px;
-    border-radius: 24px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    url("../assets/images/landscap-background.png");
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  height: 600px; /* Adjust based on your design */
+  margin: 24px;
+  padding: 24px;
+  border-radius: 24px;
 }
 
 .shadow-div {
-    box-shadow: 0 4px 16px 0 rgba(141, 211, 187, 0.15);
-    margin-left: auto;
-    margin-right: auto;
+  box-shadow: 0 4px 16px 0 rgba(141, 211, 187, 0.15);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .search-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .input-group {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 20px;
 }
 
 .input-group:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .input-label {
-    margin-left: 10px;
-    margin-bottom: 5px;
-    color: #79747E;
-    font-size: 14px;
-    font-family: 'Montserrat', sans-serif;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  color: #79747e;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .input-field {
-    width: 100%;
-    border: 1px solid #79747E;
-    border-radius: 4px;
-    padding: 8px 12px;
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: white;
-    color: #112211;
-    appearance: none; /* Removes default styling for select elements */
+  width: 100%;
+  border: 1px solid #79747e;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  background-color: white;
+  color: #112211;
+  appearance: none; /* Removes default styling for select elements */
 }
 
 .input-field:focus {
-    outline: none;
-    border-color: #8DD3BB;
-    box-shadow: 0 0 0 2px rgba(141, 211, 187, 0.2);
+  outline: none;
+  border-color: #8dd3bb;
+  box-shadow: 0 0 0 2px rgba(141, 211, 187, 0.2);
 }
 
 /* Custom styling for select dropdown arrow */
 select.input-field {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23112211' d='M6 7.4L0 1.4 1.4 0l4.6 4.6L10.6 0 12 1.4z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    padding-right: 30px; /* Make room for the custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23112211' d='M6 7.4L0 1.4 1.4 0l4.6 4.6L10.6 0 12 1.4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px; /* Make room for the custom arrow */
 }
 
 .inputs-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 /* Adjust the width of specific inputs if needed */
 .inputs-row .input-group:nth-child(1) .input-field,
 .inputs-row .input-group:nth-child(3) .input-field {
-    flex: 2 0 auto;
+  flex: 2 0 auto;
 }
 
 .inputs-row .input-group:nth-child(2) .input-field {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+
+.trip-planning-section {
+  margin-top: 13%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
