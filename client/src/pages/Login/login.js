@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/logo.css";
+import LoginImage from "../../assets/images/Login-image.png";
+import GoogleIcon from "../../assets/images/google.svg";
 
 const Login = () => {
   return (
@@ -41,7 +43,7 @@ const Login = () => {
           </button>
           <button className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-black hover:text-white">
             <img
-              src={"/icon/google.svg"}
+              src={GoogleIcon}
               alt="Google"
               className="w-6 h-6 inline mr-2"
             />
@@ -55,7 +57,7 @@ const Login = () => {
         {/* Right side */}
         <div className="relative">
           <img
-            src={"logo1.png"}
+            src={LoginImage}
             alt="Background"
             className="w-[400px] h-full hidden rounded-r-2xl md:block object-cover"
           />
