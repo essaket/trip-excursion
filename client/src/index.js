@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Home from './pages/Landing-page/index'; // Import the Landing-page component
+import Login from './pages/Login/login'; // Import the Landing-page component
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <Home /> {/* Render the Landing-page component */}
+        <Login /> {/* Render the Landing-page component */}
     </React.StrictMode>
 );
 
