@@ -4,6 +4,7 @@ import "../../styles/Home.css";
 import HeroHeader from "../../components/HeroHeader";
 import SearchForm from "../../components/SearchForm";
 import TripCard from "../../components/TripCard";
+import ReviewCard from "../../components/ReviewCard";
 import BakuImage from "../../assets/images/Baku.png";
 import ParisImage from "../../assets/images/Paris.png";
 import TokyoImage from "../../assets/images/Tokyo.png";
@@ -23,12 +24,12 @@ const Home = () => {
         <h2 className="sub-header">
           Explore the world with expert-led tours and personalized Trips
         </h2>
-        <div className="w-[86%] h-[280px] rounded-[16px] mt-[10%] bg-white shadow-div">
+        <div className="max-w-7xl w-[86%] h-[280px] rounded-[16px] mt-[10%] bg-white shadow-div">
           <SearchForm />
         </div>
         {/* Add more content */}
       </div>
-      <div className="trip-planning-section mt-[5%]">
+      <div className="trip-planning-section max-w-7xl min-w-xl mt-[5%] mx-[16vw]">
         <div className="flex justify-between items-center">
           <div>
             <h1
@@ -97,6 +98,42 @@ const Home = () => {
             title="Dubai, UAE"
             subTitle="Flights • Hotels • Resorts"
           />
+        </div>
+      </div>
+      {/* New Reviews Section */}
+      <div className="reviews-section mt-[3.5%] max-w-7xl min-w-xl mx-[16vw] mb-[2%]">
+        <div className="flex justify-between items-center">
+          <div>
+            <h1
+              className="text-[32px] font-semibold"
+              style={{ fontFamily: "Montserrat" }}
+            >
+              Reviews
+            </h1>
+            <h2
+              className="text-[16px] font-normal"
+              style={{ fontFamily: "Montserrat" }}
+            >
+              What people says about Trip-Excursion
+            </h2>
+          </div>
+          <button
+            className="text-[#112211] bg-white border-[#8DD3BB] border-[1px] rounded-[4px] w-[150px] h-[40px]"
+            style={{ fontFamily: "Montserrat" }}
+          >
+            See All
+          </button>
+        </div>
+        <div className="review-cards-container mt-4 flex flex-wrap justify-between">
+          <ReviewCard
+            title="Great Experience"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            reviewerName="John Doe"
+            reviewerDescription="Traveler"
+            imageSrc={ParisImage}
+          />
+
+          {/* Add more ReviewCard components as needed */}
         </div>
       </div>
     </div>

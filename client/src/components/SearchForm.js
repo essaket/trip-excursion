@@ -51,7 +51,7 @@ const SearchForm = () => {
   };
 
   return (
-    <div className="search-form" style={{ padding: "20px" }}>
+    <div className="search-form">
       <div className="header-section">
         <h3
           style={{
@@ -127,6 +127,12 @@ const SearchForm = () => {
           />
         </div>
       </div>
+      <button
+        className="w-[140px] h-[50px] bg-[#8DD3BB] text-[#112211] font-medium text-[14px] rounded mt-10 ml-auto"
+        style={{ fontFamily: "Montserrat" }}
+      >
+        Search Trips
+      </button>
     </div>
   );
 };
