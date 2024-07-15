@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styles/logo.css";
-import LoginImage from "../../assets/images/Login-image.png";
+import "../../styles/sign-up.css";
+import LoginImage1 from "../../assets/images/Login-image-1.png";
 import GoogleIcon from "../../assets/images/google.svg";
 
 const Sign_up = () => {
@@ -96,7 +96,7 @@ const Sign_up = () => {
         {/* Right side */}
         <div className="relative">
           <img
-            src={LoginImage}
+            src={LoginImage1}
             alt="Background"
             className="w-[400px] h-full hidden rounded-r-2xl md:block object-cover"
           />

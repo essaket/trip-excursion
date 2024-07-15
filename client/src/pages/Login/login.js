@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/logo.css";
+import "../../styles/login.css";
 import LoginImage from "../../assets/images/Login-image.png";
 import GoogleIcon from "../../assets/images/google.svg";
 
