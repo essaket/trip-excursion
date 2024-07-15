@@ -46,8 +46,8 @@ const Home = () => {
             </h2>
           </div>
           <button
-            className="text-[14px] font-medium text-[#112211] border-[#8DD3BB] border-[1px] rounded-[4px] w-[150px] h-[40px]"
-            style={{ fontFamily: "Montserrat", backgroundColor: "transparent" }}
+            className="text-[14px] font-medium text-[#112211] bg-transparent border-[#8DD3BB] border-[1px] rounded-[4px] w-[150px] h-[40px] hover:bg-[#8DD3BB] hover:text-white transition duration-300 ease-in-out"
+            style={{ fontFamily: "Montserrat" }}
           >
             See more places
           </button>
@@ -118,7 +118,7 @@ const Home = () => {
             </h2>
           </div>
           <button
-            className="text-[#112211] bg-white border-[#8DD3BB] border-[1px] rounded-[4px] w-[150px] h-[40px]"
+            className="text-[#112211] bg-transparent border-[#8DD3BB] border-[1px] rounded-[4px] w-[150px] h-[40px] hover:bg-[#8DD3BB] hover:text-white transition duration-300 ease-in-out"
             style={{ fontFamily: "Montserrat" }}
           >
             See All
@@ -133,7 +133,20 @@ const Home = () => {
             imageSrc={ParisImage}
           />
 
-          {/* Add more ReviewCard components as needed */}
+          <ReviewCard
+            title="Unforgettable Adventure"
+            description="Our trip with Trip-Excursion was simply amazing. The guides were knowledgeable, the itinerary was well-planned, and the experiences were unique. I'd highly recommend their services to anyone looking for an extraordinary travel experience."
+            reviewerName="Emma Thompson"
+            reviewerDescription="Adventure Enthusiast"
+            imageSrc={SydneyImage}
+          />
+          <ReviewCard
+            title="Exceptional Service"
+            description="From the moment we booked until the end of our journey, Trip-Excursion provided top-notch service. They were attentive to our needs and made sure every aspect of our trip was perfect. It was truly a 5-star experience."
+            reviewerName="Michael Chen"
+            reviewerDescription="Frequent Traveler"
+            imageSrc={BakuImage}
+          />
         </div>
       </div>
     </div>

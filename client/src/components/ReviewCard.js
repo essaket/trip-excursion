@@ -18,9 +18,10 @@ const ReviewCard = ({
         maxWidth: "425px",
         padding: "24px",
         backgroundColor: "white",
-        boxShadow: "26px 26px 0 rgba(141, 211, 187, 0.4)",
+        boxShadow: "26px 26px 7px rgba(141, 211, 187, 0.4)",
         marginBottom: "26px",
         marginRight: "26px",
+        borderRadius: "20px",
       }}
     >
       <h3

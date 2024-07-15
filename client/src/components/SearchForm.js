@@ -128,7 +128,7 @@ const SearchForm = () => {
         </div>
       </div>
       <button
-        className="w-[140px] h-[50px] bg-[#8DD3BB] text-[#112211] font-medium text-[14px] rounded mt-10 ml-auto"
+        className="w-[140px] h-[50px] bg-[#8DD3BB] text-[#112211] font-medium text-[14px] rounded mt-10 ml-auto hover:bg-transparent hover:border-[#8DD3BB] hover:border-2 transition duration-300 ease-in-out"
         style={{ fontFamily: "Montserrat" }}
       >
         Search Trips
