@@ -6,6 +6,8 @@ import Login from "./pages/Login/login";
 import SignUp from "./pages/Sign-up/sign-up";
 import Trips from "./pages/trips/trips";
 import Home from "./pages/Landing-page/index";
+import Book from "./pages/Book/book";
+import BookingProcess from "./pages/Book/booking-process";
 
 function App() {
   return (
@@ -27,6 +29,10 @@ function App() {
 
         {/* Add other routes as needed */}
         <Route path="/trips" element={<Trips />} />
+
+        <Route path="/book/:id" element={<Book />} />
+
+        <Route path="/booking-process" element={<BookingProcess />} />
       </Routes>
     </AuthProvider>
   );
