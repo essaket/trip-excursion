@@ -1,0 +1,147 @@
+/* Position buttons in a row */
+.flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .space-x-4 > * + * {
+    margin-left: 1rem;
+  }
+  
+  /* Image styling */
+  img.selected {
+    border: 2px solid #000; /* Optional: Highlight the selected image */
+  }
+  
+  img.cursor-pointer {
+    cursor: pointer;
+  }
+  
+  img.w-full {
+    width: 100%;
+  }
+  
+  img.h-auto {
+    height: auto;
+  }
+  
+  img.rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
+  /* Styling for the star rating */
+  .stars {
+    color: #f5c518; /* Yellow color for stars */
+  }
+  
+  /* Styling for the buttons */
+  .bg-primary {
+    background-color: #007bff;
+  }
+  
+  .text-primary-foreground {
+    color: #fff;
+  }
+  
+  .bg-accent {
+    background-color: #ff4081;
+  }
+  
+  .text-accent-foreground {
+    color: #fff;
+  }
+  
+  .bg-secondary {
+    background-color: #6c757d;
+  }
+  
+  .text-secondary-foreground {
+    color: #fff;
+  }
+  
+  /* General utility classes */
+  .bg-background {
+    background-color: #f8f9fa;
+  }
+  
+  .text-foreground {
+    color: #212529;
+  }
+  
+  .text-muted-foreground {
+    color: #6c757d;
+  }
+  
+  .bg-card {
+    background-color: #fff;
+  }
+  
+  .bg-muted {
+    background-color: #e9ecef;
+  }
+  
+  .p-2 {
+    padding: 0.5rem;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .p-6 {
+    padding: 1.5rem;
+  }
+  
+  .mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
+  .mt-8 {
+    margin-top: 2rem;
+  }
+  
+  .mb-2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
+  
+  .font-bold {
+    font-weight: bold;
+  }
+  
+  .font-normal {
+    font-weight: normal;
+  }
+  
+  .font-semibold {
+    font-weight: 600;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+  }
+  
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-lg {
+    font-size: 1.125rem;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+  
