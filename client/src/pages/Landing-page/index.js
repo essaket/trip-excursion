@@ -1,7 +1,9 @@
 // src/pages/Landing-page/index.js
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../../styles/Home.css";
 import HeroHeader from "../../components/HeroHeader";
+import LogoSvg from "../../assets/images/TE-logo.svg";
 import SearchForm from "../../components/SearchForm";
 import TripCard from "../../components/TripCard";
 import ReviewCard from "../../components/ReviewCard";
@@ -16,10 +18,11 @@ import MaléImage from "../../assets/images/Malé.png";
 import DubaiImage from "../../assets/images/Dubai.png";
 
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <div className="hero-section">
-        <HeroHeader />
+        <HeroHeader imgSrc={LogoSvg} />
         <h1 className="big-header">Discover Extraordinary Guided Adventures</h1>
         <h2 className="sub-header">
           Explore the world with expert-led tours and personalized Trips
@@ -46,6 +49,7 @@ const Home = () => {
             </h2>
           </div>
           <button
+            onClick={() => navigate("/trips")}
             className="text-[14px] font-medium text-[#112211] bg-transparent border-[#8DD3BB] border-[1px] rounded-[4px] w-[150px] h-[40px] hover:bg-[#8DD3BB] hover:text-white transition duration-300 ease-in-out"
             style={{ fontFamily: "Montserrat" }}
           >
