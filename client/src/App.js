@@ -5,14 +5,18 @@ import Login from "./pages/Login/login";
 import SignUp from "./pages/Sign-up/sign-up";
 import Home from "./pages/Landing-page/index"; // Assuming you have a Home component
 import Book from "./pages/Book/book";
+import User from "./pages/User/user";
 
 function App() {
   return (
     <Routes>
       {/* Redirect root path to login */}
-      <Route path="/" element={<Navigate to="/book" replace />} />
+      <Route path="/" element={<Navigate to="/user" replace />} />
 
-      {/* Login route */}
+      {/* User route */}
+      <Route path="/user" element={<User />} />
+
+      {/* Book route */}
       <Route path="/book" element={<Book />} />
 
       {/* Login route */}
