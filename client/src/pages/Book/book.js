@@ -98,7 +98,7 @@ const Book = () => {
       </div>
 
       <div className="max-w-7xl mx-auto mt-8">
-        <h2 className="text-xl font-semibold mb-2">Amenities</h2>
+        <h2 className="text-xl font-semibold mb-2">Activities</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-muted-foreground">
           <div className="flex items-center">
             <img src="https://openui.fly.dev/openui/24x24.svg?text=🏊" alt="Swimming pool" className="mr-2" />
@@ -137,13 +137,16 @@ const Book = () => {
 
       <div className="max-w-7xl mx-auto mt-8">
         <h2 className="text-xl font-semibold mb-2">Reviews</h2>
-        <div className="bg-card p-4 rounded-lg mb-4">
-          <div className="flex items-center mb-2">
+        <div className="p-3 rounded-lg mb-4">
+        <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center">
             <div className="bg-primary text-primary-foreground p-2 rounded-full mr-4">
-              <span className="text-lg font-bold">4.2</span>
+            <span className="text-lg font-bold">4.2</span>
             </div>
             <span className="text-muted-foreground">Very good</span>
-          </div>
+        </div>
+        <button className="bg-primary text-primary-foreground px-4 py-2 rounded-lg">Add reviews</button>
+        </div>
           <div className="space-y-4">
             <div className="bg-muted p-4 rounded-lg">
               <p className="text-muted-foreground mb-2">"Great location and service. The rooms were clean and comfortable."</p>
