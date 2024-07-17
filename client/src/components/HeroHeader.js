@@ -31,7 +31,7 @@ const HeroHeader = ({
         aria-label="Global"
       >
         <div className="flex flex-1 justify-start">
-          <Link to="/search" className={buttonClasses}>
+          <Link to="/trips" className={buttonClasses}>
             Explore Trips
           </Link>
         </div>
