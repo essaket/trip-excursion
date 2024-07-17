@@ -45,7 +45,7 @@ const Book = () => {
               <span className="text-lg font-semibold">$250</span>
             </div>
             <div className="flex space-x-4">
-              <div className="bg-white border border-black p-2 rounded-full cursor-pointer" onClick={toggleFavorite}>
+              <div className="bg-white border border-white p-2 rounded-full cursor-pointer" onClick={toggleFavorite}>
                 <svg
                   className="h-6 w-6"
                   fill="none"
