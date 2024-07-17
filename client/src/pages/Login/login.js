@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/login.css";
 import LoginImage from "../../assets/images/Login-image.png";
 import GoogleIcon from "../../assets/images/google.svg";
+import { useAuth } from "../../components/AuthContext"; // Adjust the path as needed
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [previousEmails, setPreviousEmails] = useState([]);
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedEmails =
+      JSON.parse(localStorage.getItem("previousEmails")) || [];
+    setPreviousEmails(storedEmails);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,8 +35,20 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
-        // Redirect to dashboard or home page
-        window.location.href = "/Home";
+
+        // Store email in local storage
+        const storedEmails =
+          JSON.parse(localStorage.getItem("previousEmails")) || [];
+        const updatedEmails = [
+          email,
+          ...storedEmails.filter((e) => e !== email),
+        ].slice(0, 5);
+        localStorage.setItem("previousEmails", JSON.stringify(updatedEmails));
+
+        // Use the login function from AuthContext
+        login(data.user); // Assuming the API returns user data
+        // Use navigate instead of window.location
+        navigate("/Home");
       } else {
         // Handle login error
         console.error("Login failed");
@@ -48,6 +71,7 @@ const Login = () => {
             <div className="py-4">
               <span className="mb-2 text-md">Email</span>
               <input
+                list="previous-emails"
                 type="text"
                 className="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
                 name="email"
@@ -55,6 +79,11 @@ const Login = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <datalist id="previous-emails">
+                {previousEmails.map((email, index) => (
+                  <option key={index} value={email} />
+                ))}
+              </datalist>
             </div>
             <div className="py-4">
               <span className="mb-2 text-md">Password</span>
