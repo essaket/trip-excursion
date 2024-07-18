@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./AuthContext"; // Adjust the import path as needed
+import { FaUser } from "react-icons/fa";
 
 const HeroHeader = ({
   imgSrc,
@@ -36,10 +37,10 @@ const HeroHeader = ({
           </Link>
         </div>
         <div className="flex flex-1 justify-center">
-          <a href="#" className="-m-1.5 p-1.5">
+          <Link to="/home" className="-m-1.5 p-1.5">
             <span className="sr-only">Trip Excursion</span>
             <img className="h-8 w-auto" src={imgSrc} alt="Logo image" />
-          </a>
+          </Link>
         </div>
         <div className="flex flex-1 justify-end space-x-4">
           {isLoggedIn ? (
@@ -47,6 +48,9 @@ const HeroHeader = ({
               <span className={`${buttonTextColor} text-sm font-medium`}>
                 Welcome, {user?.username || "User"}
               </span>
+              <Link to="/user" className={`${buttonClasses} p-2`}>
+                <FaUser />
+              </Link>
               <button onClick={handleLogout} className={buttonClasses}>
                 Log Out
               </button>

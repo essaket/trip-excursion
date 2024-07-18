@@ -86,13 +86,12 @@ router.post("/login", async (req, res) => {
 router.get("/profile", authMiddleware, async (req, res) => {
   try {
     const [users] = await pool.query(
-      "SELECT id, username, email FROM Users WHERE id = ?",
-      [req.user.id]
+      "SELECT user_id, username, email FROM Users WHERE user_id = ?",
+      [req.user.user_id]
     );
     if (users.length === 0) {
       return res.status(404).json({ error: "User not found" });
     }
-
     res.json(users[0]);
   } catch (err) {
     console.error(err.message);

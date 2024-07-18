@@ -9,10 +9,14 @@ import TripCard from "../../components/TripCard";
 import ReviewCard from "../../components/ReviewCard";
 import BakuImage from "../../assets/images/Baku.png";
 import ParisImage from "../../assets/images/Paris.png";
+import OldParisImage from "../../assets/images/OldParis.png";
+import OldBakuImage from "../../assets/images/OldBaku.png";
+import OldLondonImage from "../../assets/images/OldLondon.png";
+import OldSydneyImage from "../../assets/images/OldSydney.png";
 import TokyoImage from "../../assets/images/Tokyo.png";
 import NewYorkImage from "../../assets/images/Newyork.png";
 import LondonImage from "../../assets/images/London.png";
-import SydneyImage from "../../assets/images/sydney.png";
+import SydneyImage from "../../assets/images/Sydney.png";
 import IstanbulImage from "../../assets/images/Istanbul.png";
 import MaléImage from "../../assets/images/Malé.png";
 import DubaiImage from "../../assets/images/Dubai.png";
@@ -56,7 +60,7 @@ const Home = () => {
             See more places
           </button>
         </div>
-        <div className="grid grid-cols-3 gap-4 mt-5 mb-5">
+        <div className="grid grid-cols-2 gap-4 mt-5 mb-5">
           <TripCard
             imageSrc={BakuImage}
             title="Baku, Azerbaijan"
@@ -134,7 +138,7 @@ const Home = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             reviewerName="John Doe"
             reviewerDescription="Traveler"
-            imageSrc={ParisImage}
+            imageSrc={OldParisImage}
           />
 
           <ReviewCard
@@ -142,14 +146,14 @@ const Home = () => {
             description="Our trip with Trip-Excursion was simply amazing. The guides were knowledgeable, the itinerary was well-planned, and the experiences were unique. I'd highly recommend their services to anyone looking for an extraordinary travel experience."
             reviewerName="Emma Thompson"
             reviewerDescription="Adventure Enthusiast"
-            imageSrc={SydneyImage}
+            imageSrc={OldSydneyImage}
           />
           <ReviewCard
             title="Exceptional Service"
             description="From the moment we booked until the end of our journey, Trip-Excursion provided top-notch service. They were attentive to our needs and made sure every aspect of our trip was perfect. It was truly a 5-star experience."
             reviewerName="Michael Chen"
             reviewerDescription="Frequent Traveler"
-            imageSrc={BakuImage}
+            imageSrc={OldBakuImage}
           />
         </div>
       </div>

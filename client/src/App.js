@@ -7,7 +7,7 @@ import SignUp from "./pages/Sign-up/sign-up";
 import Trips from "./pages/trips/trips";
 import Home from "./pages/Landing-page/index";
 import Book from "./pages/Book/book";
-
+import User from "./pages/User/user";
 import BookingProcess from "./pages/Book/booking-process";
 
 function App() {
@@ -34,6 +34,8 @@ function App() {
         <Route path="/book/:id" element={<Book />} />
 
         <Route path="/booking-process" element={<BookingProcess />} />
+
+        <Route path="/user" element={<User />} />
       </Routes>
     </AuthProvider>
   );

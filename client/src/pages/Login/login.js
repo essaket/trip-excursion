@@ -35,7 +35,7 @@ const Login = () => {
       if (response.ok) {
         const data = await response.json();
         localStorage.setItem("token", data.token);
-
+        console.log("Token stored:", data.token);
         // Store email in local storage
         const storedEmails =
           JSON.parse(localStorage.getItem("previousEmails")) || [];
@@ -46,12 +46,13 @@ const Login = () => {
         localStorage.setItem("previousEmails", JSON.stringify(updatedEmails));
 
         // Use the login function from AuthContext
-        login(data.user); // Assuming the API returns user data
+        login(data.user || { id: data.userId, email: email }); // Assuming the API returns user data
         // Use navigate instead of window.location
         navigate("/Home");
       } else {
         // Handle login error
-        console.error("Login failed");
+        const errorData = await response.json();
+        console.error("Login failed:", errorData);
       }
     } catch (error) {
       console.error("Error:", error);
