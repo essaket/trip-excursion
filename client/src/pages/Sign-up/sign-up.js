@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/sign-up.css";
 import LoginImage1 from "../../assets/images/Login-image-1.png";
@@ -9,6 +10,8 @@ const Sign_up = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [signupSuccess, setSignupSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +30,8 @@ const Sign_up = () => {
       );
       if (response && response.data) {
         console.log(response.data);
-        // Handle successful registration
+        setSignupSuccess(true);
+        // You might want to clear the form fields here
       } else {
         console.error("Unexpected response format:", response);
       }
@@ -108,6 +112,11 @@ const Sign_up = () => {
                 </div>
               </div>
             </div>
+            {signupSuccess && (
+              <span className="text-green-500 font-bold mt-4 block">
+                You successfully signed up to Trip Excursion
+              </span>
+            )}
             <div className="flex justify-between w-full py-4">
               <div className="mr-24">
                 <input type="checkbox" name="ch" id="ch" className="mr-2" />
@@ -122,13 +131,11 @@ const Sign_up = () => {
             >
               Sign up
             </button>
-            <button className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-black hover:text-white">
-              <img
-                src={GoogleIcon}
-                alt="Google"
-                className="w-6 h-6 inline mr-2"
-              />
-              Sign up with Google
+            <button
+              onClick={() => navigate("/login")}
+              className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-black hover:text-white"
+            >
+              Back to login
             </button>
           </div>
           {/* Right side */}

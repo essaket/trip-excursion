@@ -1,35 +1,41 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import "./index.css"; // or whatever your main CSS file is named
+import { AuthProvider } from "./components/AuthContext"; // Import AuthProvider
 import Login from "./pages/Login/login";
 import SignUp from "./pages/Sign-up/sign-up";
-import Home from "./pages/Landing-page/index"; // Assuming you have a Home component
+import Trips from "./pages/trips/trips";
+import Home from "./pages/Landing-page/index";
 import Book from "./pages/Book/book";
-import User from "./pages/User/user";
+
+import BookingProcess from "./pages/Book/booking-process";
 
 function App() {
   return (
-    <Routes>
-      {/* Redirect root path to login */}
-      <Route path="/" element={<Navigate to="/user" replace />} />
+    <AuthProvider>
+      {" "}
+      {/* Wrap the entire app with AuthProvider */}
+      <Routes>
+        {/* Redirect root path to login */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
-      {/* User route */}
-      <Route path="/user" element={<User />} />
+        {/* Login route */}
+        <Route path="/login" element={<Login />} />
 
-      {/* Book route */}
-      <Route path="/book" element={<Book />} />
+        {/* Sign up route */}
+        <Route path="/sign-up" element={<SignUp />} />
 
-      {/* Login route */}
-      <Route path="/login" element={<Login />} />
+        {/* Home route (protected) */}
+        <Route path="/home" element={<Home />} />
 
-      {/* Sign up route */}
-      <Route path="/sign-up" element={<SignUp />} />
+        {/* Add other routes as needed */}
+        <Route path="/trips" element={<Trips />} />
 
-      {/* Home route (protected) */}
-      <Route path="/home" element={<Home />} />
+        <Route path="/book/:id" element={<Book />} />
 
-      {/* Add other routes as needed */}
-    </Routes>
+        <Route path="/booking-process" element={<BookingProcess />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 
