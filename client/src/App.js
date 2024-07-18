@@ -7,6 +7,7 @@ import SignUp from "./pages/Sign-up/sign-up";
 import Trips from "./pages/trips/trips";
 import Home from "./pages/Landing-page/index";
 import Book from "./pages/Book/book";
+
 import BookingProcess from "./pages/Book/booking-process";
 
 function App() {
